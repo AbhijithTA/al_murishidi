@@ -1,0 +1,41 @@
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25vh;
+  
+    .card {
+      position: absolute;
+      width: 20%;
+      height: 40vh;
+      border: 1px solid white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px white;
+      overflow: hidden; /* To ensure text or image doesn't overflow */
+    }
+  
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the image fits properly in the card */
+    }
+  
+    .card-text {
+      position: absolute;
+      bottom: 1vh; /* Adjust the positioning of the text */
+    //   left: 10px;
+      color: white; /* White text over the image */
+      font-size: 1.2rem;
+      bottom: 5vh;
+      background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background for text */
+      padding: 5px 10px;
+      border-radius: 5px;
+
+      button {
+        background: white;
+        width: 5vw;
+        font-size: .6rem;
+        height: 4vh;
+      }
+    }
+  }
