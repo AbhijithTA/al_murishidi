@@ -29,7 +29,7 @@ const Footer = () => {
               Learn More <span className="ml-2">&rarr;</span>
             </a>
           </div>
-          F{/* Our Products Section */}
+          {/* Our Products Section */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-yellow-400">Our Products</h3>
             <ul className="text-gray-400 space-y-3">

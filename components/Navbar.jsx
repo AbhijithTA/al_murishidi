@@ -1,122 +1,145 @@
-/* eslint-disable react/no-unknown-property */
 import { useState } from "react";
 
-const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  //toggle for mobile menu
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+const NavbarComponent = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-      <nav className="bg-[#38040e] shadow-md z-50 fixed w-full top-0 left-0">
-        {/* parent div */}
-        <div className="container mx-auto flex items-center justify-between py-3 px-6 lg:px-12">
-          {/* left child */}
-          <div className="flex items-center space-x-3">
-            <img src="./logo.png" alt="logo" className="h-8" />
-          </div>
-
-          {/* right child desktop navbar Items*/}
-          <div className="hidden lg:flex items-center space-x-8">
-            <a
-              href="/"
-              className="text-[#F9FAFB] font-semibold hover:text-white hover:bg-[#343a40] p-3 rounded-md transition duration-200"
-            >
-              Home
-            </a>
-            <a
-              href="/"
-              className="text-[#ECF0F1] font-semibold hover:text-white hover:bg-[#343a40] p-3 rounded-md transition duration-200"
-            >
-              Brands
-            </a>
-            <a
-              href="/"
-              className="text-[#ECF0F1] font-semibold hover:text-white hover:bg-[#343a40] p-3 rounded-md transition duration-200"
-            >
-              About
-            </a>
-            <a
-              href="/"
-              className="text-[#ECF0F1] font-semibold hover:text-white hover:bg-[#343a40] p-3 rounded-md transition duration-200"
-            >
-              Products
-            </a>
-            <a
-              href="/"
-              className="text-[#ECF0F1] font-semibold hover:text-white hover:bg-[#343a40] p-3 rounded-md transition duration-200"
-            >
-              Contact
-            </a>
-          </div>
-          {/* mobile menu */}
-          <div className="lg:hidden flex items-center">
-            <button
-              onClick={toggleMobileMenu}
-              className="text-gray-800 p-3 focus:outline-none"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+      {/* Main Parent Div */}
+      <div className="w-full flex items-center justify-between bg-white p-4 shadow-md">
+        {/* Logo Section */}
+        <div className="flex items-center">
+          <img
+            src="/logo.png"
+            alt="Logo"
+            className="h-16 w-auto object-contain"
+          />
         </div>
 
-        {/* mobile menu */}
-        <div
-          className={`lg:hidden ${
-            isMobileMenuOpen ? "block" : "hidden"
-          } bg-white shadow-md `}
-        >
-          <div className="flex flex-col items-center space-y-4 py-4">
-            <a
-              href="/"
-              className="text-gray-800 font-semibold hover:text-white hover:bg-green-600 w-full text-center p-3 rounded-md transition duration-200"
+        {/* hamburger menu for small screens */}
+        <div className="lg:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-black focus:outline-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              Home
-            </a>
-            <a
-              href="/"
-              className="text-gray-800 font-semibold hover:text-white hover:bg-green-600 w-full text-center p-3 rounded-md transition duration-200"
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Navigation Links Section */}
+        <div className="hidden lg:flex space-x-8 text-black font-medium">
+          <a
+            href="#home"
+            className="hover:underline hover:text-yellow-500 uppercase tracking-wide"
+          >
+            Home
+          </a>
+          <a
+            href="#about-us"
+            className="hover:underline hover:text-yellow-500 uppercase tracking-wide"
+          >
+            About Us
+          </a>
+          <a
+            href="#products"
+            className="hover:underline hover:text-yellow-500 uppercase tracking-wide"
+          >
+            Our Products
+          </a>
+          <a
+            href="#blog"
+            className="hover:underline hover:text-yellow-500 uppercase tracking-wide"
+          >
+            Services
+          </a>
+          <a
+            href="#contact"
+            className="hover:underline hover:text-yellow-500 uppercase tracking-wide"
+          >
+            Contact
+          </a>
+        </div>
+
+        {/* Toll-Free and Phone Section */}
+        <div className="hidden lg:flex flex-col items-center space-x-6">
+          {/* Toll-Free Number */}
+          <div className="bg-yellow-400 text-black font-bold py-2 px-6 rounded-md uppercase">
+            Toll Free Number 8003969
+          </div>
+
+          {/* Phone Number */}
+          <div className="flex items-center space-x-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-red-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              Brands
-            </a>
-            <a
-              href="/"
-              className="text-gray-800 font-semibold hover:text-white hover:bg-green-600 w-full text-center p-3 rounded-md transition duration-200"
-            >
-              About
-            </a>
-            <a
-              href="/"
-              className="text-gray-800 font-semibold hover:text-white hover:bg-green-600 w-full text-center p-3 rounded-md transition duration-200"
-            >
-              Products
-            </a>
-            <a
-              href="/"
-              className="text-gray-800 font-semibold hover:text-white hover:bg-green-600 w-full text-center p-3 rounded-md transition duration-200"
-            >
-              Contact
-            </a>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 10l9 9m0 0l9-9m-9 9V3"
+              />
+            </svg>
+            <span className="text-black font-medium">056 688 5293</span>
           </div>
         </div>
-      </nav>
+      </div>
+
+      {/* mobile menu */}
+      {isMenuOpen && (
+        <div className="lg:hidden bg-white shadow-md p-4 space-y-4">
+          <a
+            href="#home"
+            className="block text-black hover:text-yellow-500 uppercase tracking-wide"
+          >
+            Home
+          </a>
+          <a
+            href="#aboutUs"
+            className="block text-black hover:text-yellow-500 uppercase tracking-wide"
+          >
+            About Us
+          </a>
+          <a
+            href="#Products"
+            className="block text-black hover:text-yellow-500 uppercase tracking-wide"
+          >
+            Our Products
+          </a>
+          <a
+            href="#servicec"
+            className="block text-black hover:text-yellow-500 uppercase tracking-wide"
+          >
+            Services
+          </a>
+          <a
+            href="#Contact"
+            className="block text-black hover:text-yellow-500 uppercase tracking-wide"
+          >
+            Contact
+          </a>
+          <div className="block text-black bg-yellow-400 font-bold py-2 px-6 rounded-md uppercase text-center">
+            Toll Free Number 8003969
+          </div>
+        </div>
+      )}
     </>
   );
 };
 
-export default Navbar;
+export default NavbarComponent;
