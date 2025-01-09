@@ -32,7 +32,7 @@ const CategoryPage = () => {
             </p>
             <a
               href="#contact"
-              className="inline-block bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-600 hover:shadow-lg transition-all duration-300"
+              className="inline-block bg-bluee text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-bluee hover:shadow-lg transition-all duration-300"
             >
               Contact Us
             </a>
@@ -127,7 +127,7 @@ const CategoryPage = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-blue-600 hover:shadow-lg transition-all duration-300"
+              className="w-full bg-bluee text-white font-semibold py-3 rounded-lg shadow-md hover:bg-blue-600 hover:shadow-lg transition-all duration-300"
             >
               Submit
             </button>

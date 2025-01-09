@@ -45,7 +45,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="bg-gray-50">
+    <div className=" px-10">
       {/* Slider Section */}
       <div className="relative w-full h-[600px] overflow-hidden">
         <div
@@ -61,14 +61,14 @@ const HeroSection = () => {
               className="w-full h-full flex-shrink-0 grid grid-cols-1 lg:grid-cols-2 items-center"
             >
               {/* Left Section - Text */}
-              <div className="flex flex-col justify-center items-start p-8 lg:p-16 bg-gradient-to-r from-white to-gray-100">
-                <h3 className="text-xl font-semibold uppercase text-gray-500 tracking-wide">
+              <div className="flex flex-col justify-center items-start p-8 lg:p-16 bg-gradient-to-r sm:mx-10">
+                <h3 className="text-sm sm:text-xl font-semibold uppercase text-gray-500 tracking-wide">
                   {slide.title}
                 </h3>
-                <h2 className="text-4xl lg:text-5xl font-extrabold mt-4 text-gray-800">
+                <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold mt-4 text-gray-800 ">
                   {slide.subtitle}
                 </h2>
-                <button className="mt-6 py-3 px-8 font-bold text-white bg-blue-500 hover:bg-blue-600 rounded-lg shadow-lg transition-all duration-300">
+                <button className="mt-6 py-3 px-8 font-bold text-white bg-redd hover:bg-bluee/80 rounded-lg shadow-lg transition-all duration-300">
                   {slide.buttonText}
                 </button>
               </div>
@@ -88,13 +88,13 @@ const HeroSection = () => {
         {/* Slider Controls */}
         <button
           onClick={handlePrevSlide}
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg transition-all duration-300"
+          className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-bluee hover:bg-bluee/80 text-white p-3 rounded-full shadow-lg transition-all duration-300 hidden sm:block"
         >
           &#8592;
         </button>
         <button
           onClick={handleNextSlide}
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg transition-all duration-300"
+          className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-bluee hover:bg-bluee/80 text-white p-3 rounded-full shadow-lg transition-all duration-300 hidden sm:block"
         >
           &#8594;
         </button>
@@ -107,7 +107,7 @@ const HeroSection = () => {
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full ${
                 currentSlide === index
-                  ? "bg-blue-500"
+                  ? "bg-bluee"
                   : "bg-gray-300 hover:bg-gray-400"
               } transition-all duration-300`}
             ></button>

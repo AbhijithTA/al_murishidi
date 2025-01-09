@@ -9,6 +9,10 @@ export default {
       animation: {
         'spin-slow': 'spin 10s linear infinite',
       },
+      colors:{
+        'bluee':"#4c6ba2",
+        'redd':"#ac5247"
+      }
     },
   },
   plugins: [],

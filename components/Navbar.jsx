@@ -42,31 +42,31 @@ const NavbarComponent = () => {
         <div className="hidden lg:flex space-x-8 text-black font-medium">
           <a
             href="#home"
-            className="hover:underline hover:text-yellow-500 uppercase tracking-wide"
+            className="hover:underline hover:text-bluee uppercase tracking-wide"
           >
             Home
           </a>
           <a
             href="#about-us"
-            className="hover:underline hover:text-yellow-500 uppercase tracking-wide"
+            className="hover:underline hover:text-bluee uppercase tracking-wide"
           >
             About Us
           </a>
           <a
             href="#products"
-            className="hover:underline hover:text-yellow-500 uppercase tracking-wide"
+            className="hover:underline hover:text-bluee uppercase tracking-wide"
           >
             Our Products
           </a>
           <a
             href="#blog"
-            className="hover:underline hover:text-yellow-500 uppercase tracking-wide"
+            className="hover:underline hover:text-bluee uppercase tracking-wide"
           >
             Services
           </a>
           <a
             href="#contact"
-            className="hover:underline hover:text-yellow-500 uppercase tracking-wide"
+            className="hover:underline hover:text-bluee uppercase tracking-wide"
           >
             Contact
           </a>
@@ -75,8 +75,8 @@ const NavbarComponent = () => {
         {/* Toll-Free and Phone Section */}
         <div className="hidden lg:flex flex-col items-center space-x-6">
           {/* Toll-Free Number */}
-          <div className="bg-yellow-400 text-black font-bold py-2 px-6 rounded-md uppercase">
-            Toll Free Number 8003969
+          <div className="bg-redd text-black font-bold py-2 px-6 rounded-md uppercase">
+            Toll Free Number <span className="text-white">8003969</span> 
           </div>
 
           {/* Phone Number */}

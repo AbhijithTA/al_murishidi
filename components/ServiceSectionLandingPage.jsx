@@ -6,21 +6,21 @@ const ServicesSection = () => {
   const services = [
     {
       id: 1,
-      icon: <FaWrench className="text-yellow-500 text-5xl" />,
+      icon: <FaWrench className="text-redd text-5xl" />,
       title: "Installation",
       description:
         "Professional installation services to ensure your spare parts fit perfectly and work flawlessly.",
     },
     {
       id: 2,
-      icon: <FaTruck className="text-yellow-500 text-5xl" />,
+      icon: <FaTruck className="text-redd text-5xl" />,
       title: "Delivery",
       description:
         "Fast and reliable delivery services to get your parts wherever you need them.",
     },
     {
       id: 3,
-      icon: <FaTools className="text-yellow-500 text-5xl" />,
+      icon: <FaTools className="text-redd text-5xl" />,
       title: "Repair",
       description:
         "Expert repair services to keep your vehicle running smoothly and efficiently.",
@@ -28,7 +28,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="bg-gray-100 py-16">
+    <section className="py-16">
       <div className="container mx-auto px-6 lg:px-20">
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 text-center mb-12">
           Our Services

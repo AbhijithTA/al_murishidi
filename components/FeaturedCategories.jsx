@@ -34,7 +34,7 @@ const FeaturedCategories = () => {
   ];
 
   return (
-    <section className="bg-[#168aad] py-20">
+    <section className=" py-20">
       <div className="container mx-auto px-6 lg:px-20">
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 text-center mb-12">
           Featured Categories
@@ -53,7 +53,7 @@ const FeaturedCategories = () => {
               <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-all duration-300 items-center justify-center hidden group-hover:flex">
                 <Link
                   to={category.link}
-                  className="bg-yellow-500 text-black font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-yellow-600 transition-colors duration-300"
+                  className="bg-bluee text-black font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-bluee/80 transition-colors duration-300"
                 >
                   Shop Now
                 </Link>
